@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Jornada Bíblica</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="dark-mode">
+    <div id="app">
+        <!-- Barra Superior -->
+        <header class="top-bar">
+       
+            
+        </header>
+
+        <!-- Conteúdo Principal -->
+        <main id="content">
+            <!-- Tela de Jornada -->
+            <section id="screen-journey" class="screen active">
+                <h1 class="screen-title">Jornada Bíblica</h1>
+                <!-- Card de Cidade Atual -->
+                <div id="city-card" class="city-card">
+                    <span id="city-name">Carregando...</span>
+                    <span class="city-arrow">▼</span>
+                </div>
+                <!-- Modal de Cidades -->
+                <div id="cities-modal" class="cities-modal hidden">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>Cidades da Jornada</h2>
+                            <button id="close-modal" class="close-modal">✕</button>
+                        </div>
+                        <div id="cities-list" class="cities-list">
+                            <!-- Lista de cidades será renderizada aqui -->
+                        </div>
+                    </div>
+                </div>
+                <div id="journey-container" class="journey-container">
+                    <!-- Fase atual será renderizada aqui -->
+                </div>
+            </section>
+
+            <!-- Tela de Missões -->
+            <section id="screen-missions" class="screen">
+                <h1 class="screen-title">Missões Diárias</h1>
+                <div id="missions-container" class="missions-container">
+                    <!-- Missões serão renderizadas aqui -->
+                </div>
+            </section>
+
+            <!-- Tela de Estudos -->
+            <section id="screen-studies" class="screen">
+  <h1 class="screen-title">Estudos Bíblicos</h1>
+
+  <!-- Barra de busca -->
+  <div class="search-bar">
+    <input type="text" id="search-studies" placeholder="🔍 Buscar estudos..." />
+  </div>
+
+  <!-- Container dos cards -->
+  <div id="studies-container" class="studies-container"></div>
+
+  <!-- Modal para exibir o estudo completo -->
+  <div id="study-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-study" class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <div id="modal-content-text"></div>
+    </div>
+  </div>
+</section>
+
+            <!-- Tela de Perfil -->
+            <section id="screen-profile" class="screen">
+                <h1 class="screen-title">Perfil</h1>
+                <div id="profile-container" class="profile-container">
+                    <!-- Perfil será renderizado aqui -->
+                </div>
+            </section>
+
+            <!-- Tela de Quiz -->
+            <section id="screen-quiz" class="screen">
+                <div id="quiz-container" class="quiz-container">
+                    <!-- Quiz será renderizado aqui -->
+                </div>
+            </section>
+        </main>
+
+<!-- Barra Inferior de Navegação -->
+<nav class="bottom-bar">
+  <div class="nav-item active" id="nav-journey">
+    <i class="fa-solid fa-route nav-icon"></i>
+    <span class="nav-label">Jornada</span>
+  </div>
+  <div class="nav-item" id="nav-studies">
+    <i class="fa-solid fa-book-open nav-icon"></i>
+    <span class="nav-label">Estudos</span>
+  </div>
+  <div class="nav-item" id="nav-telegram">
+    <i class="fa-brands fa-telegram nav-icon"></i>
+    <span class="nav-label">Telegram</span>
+  </div>
+  <div class="nav-item" id="nav-profile">
+    <i class="fa-solid fa-user nav-icon"></i>
+    <span class="nav-label">Perfil</span>
+  </div>
+</nav>
+
+    <script src="data/journey_data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
