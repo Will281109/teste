@@ -1012,8 +1012,8 @@ body.dark-mode #app {
 }
 
 .city-icon-img {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   object-fit: contain;
 }
 
@@ -1040,8 +1040,8 @@ body.dark-mode #app {
 }
 
 .city-icon-wrapper {
-  width: 30px;
-  height: 30px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ffffff, #f3f6ff);
   display: flex;
@@ -1065,8 +1065,8 @@ body.dark-mode #app {
   color: #666;
 }
 .city-icon-img {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   object-fit: contain;
 }
 
@@ -1075,7 +1075,7 @@ body.dark-mode #app {
 }
 .block-icon {
   font-size: 28px;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .block-card.completed .block-icon {
@@ -1272,3 +1272,285 @@ body.dark-mode .block-card.locked {
    color: #fff; /* Cor do ícone (se for de fonte) */
 }
 
+/* ================================
+   AJUSTES FINAIS PARA MOBILE VIEW
+   ================================ */
+@media (max-width: 600px) {
+  html, body {
+    height: 100%;
+    overflow: hidden; /* Evita rolagem */
+  }
+
+  #app {
+    max-width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  /* Grade dos blocos ajustada */
+  .blocks-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px; /* Espaço reduzido */
+    width: 95%;
+    max-width: 380px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .block-card {
+    aspect-ratio: 1 / 1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    transition: all 0.2s ease;
+  }
+
+  .phase-card {
+    padding: 10px;
+    margin: 0 auto;
+    width: 95%;
+    box-shadow: none;
+  }
+
+  .phase-header {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .phase-icon {
+    width: 55px;
+    height: 55px;
+  }
+
+  .phase-info {
+    text-align: center;
+  }
+
+  .phase-name {
+    font-size: 1.1em;
+  }
+
+  .phase-progress {
+    font-size: 0.8em;
+  }
+
+  /* Ajuste do rodapé */
+  .bottom-bar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 6px 0;
+  }
+}
+/* ============================================
+   LAYOUT FIXO E CENTRALIZADO (PC / TABLET / CELULAR)
+   ============================================ */
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* impede rolagem */
+}
+
+#app {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Área principal */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+}
+
+/* Cartão da fase (centralizado) */
+.phase-card {
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  box-shadow: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Cabeçalho da fase */
+.phase-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.phase-icon {
+  width: 60px;
+  height: 60px;
+}
+
+.phase-name {
+  font-size: 1.2em;
+  margin-top: 5px;
+}
+
+.phase-progress {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Grade de lições */
+.blocks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 3px;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.block-card {
+  aspect-ratio: 1 / 1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+  transition: all 0.2s ease;
+}
+
+/* Rodapé fixo */
+.bottom-bar {
+  
+  bottom: 0;
+  width: 100%;
+  padding: 8px 0;
+  background: #fff;
+  border-top: 2px solid #e0e0e0;
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Ajustes para modo escuro */
+body.dark-mode .bottom-bar {
+  background-color: #16213e;
+  border-top-color: #444;
+}
+
+/* Ajuste visual global */
+.block-title {
+  font-size: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.phase-card, .blocks-grid, .bottom-bar {
+  flex-shrink: 0; /* evita compressão em telas pequenas */
+}
+
+/* ===========================
+   FORÇAR CABEÇALHO HORIZONTAL
+   ÍCONE À ESQUERDA + NOME AO LADO
+   Colar ESTE BLOCO no FINAL do style.css
+   =========================== */
+
+.phase-card .phase-header {
+  display: flex !important;           /* garante layout em linha */
+  flex-direction: row !important;     /* ícone e texto lado a lado */
+  align-items: center !important;     /* centraliza verticalmente */
+  justify-content: flex-start !important;
+  gap: 12px !important;               /* espaçamento entre ícone e texto */
+  width: 100% !important;
+  padding: 6px 0 !important;
+  box-sizing: border-box;
+  text-align: left !important;
+}
+
+/* ícone da cidade — fica fixo à esquerda */
+.phase-card .phase-icon {
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;         /* evita encolher */
+  min-height: 64px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+}
+
+/* área de texto ao lado do ícone */
+.phase-card .phase-info {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: flex-start !important;
+  gap: 2px !important;
+  flex: 1 1 auto !important;
+  min-width: 0; /* importante para truncar corretamente se necessário */
+}
+
+/* nome da cidade e progresso alinhados à esquerda */
+.phase-card .phase-name {
+  margin: 0 !important;
+  font-size: 1.15rem !important;
+  font-weight: 700 !important;
+  color: var(--phase-name-color, #fff) !important; /* mantém cor do tema */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* linha de progresso / subtítulo */
+.phase-card .phase-progress {
+  margin: 0 !important;
+  font-size: 0.85rem !important;
+  color: var(--phase-progress-color, #d7e6ff) !important;
+  opacity: 0.9;
+}
+
+/* ajuste em telas bem pequenas para não quebrar */
+@media (max-width: 420px) {
+  .phase-card .phase-icon {
+    width: 52px !important;
+    height: 52px !important;
+    min-width: 52px !important;
+    min-height: 52px !important;
+  }
+  .phase-card .phase-name {
+    font-size: 1rem !important;
+  }
+  .blocks-grid {
+    gap: 3px !important;
+  }
+}
