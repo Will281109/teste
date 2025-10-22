@@ -1187,11 +1187,11 @@ body.dark-mode .block-card.locked {
 .blocks-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 COLUNAS, COMO PEDIDO */
-  gap: 12px; /* Espaço entre os blocos */
-  padding: 15px;
+  gap: 4px; /* Espaço entre os blocos */
+  padding: 1px;
   width: 100%;
-  max-width: 480px; 
-  margin: 0 auto;
+  max-width: 400px; 
+  margin: 0px ;
 }
 
 .block-card {
@@ -1202,7 +1202,7 @@ body.dark-mode .block-card.locked {
   /* FORÇA O BLOCO A SER UM QUADRADO PERFEITO */
   aspect-ratio: 1 / 1; 
   
-  border-radius: 16px; 
+  border-radius: 10px; 
   cursor: pointer;
   transition: all 0.2s ease;
   
@@ -1271,3 +1271,4 @@ body.dark-mode .block-card.locked {
 .block-card.completed .block-icon {
    color: #fff; /* Cor do ícone (se for de fonte) */
 }
+
