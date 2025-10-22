@@ -1197,7 +1197,7 @@ body.dark-mode .block-card.locked {
 .block-card {
   /* Remove a largura máxima fixa que estava causando o problema */
   /* max-width: 80px;  <-- REMOVIDO */
-  width: 100%; /* Ocupa 100% da célula da grade */
+  width: 80%; /* Ocupa 100% da célula da grade */
 
   /* FORÇA O BLOCO A SER UM QUADRADO PERFEITO */
   aspect-ratio: 1 / 1; 
@@ -1222,7 +1222,7 @@ body.dark-mode .block-card.locked {
 .block-icon {
   /* O ícone (cadeado). Ajuste o 'font-size' se for ícone de fonte */
   font-size: 28px; 
-  margin-bottom: 6px; 
+  margin-bottom: 5px; 
 }
 
 /* Se o ícone for uma imagem (<img>) */
@@ -1234,7 +1234,7 @@ body.dark-mode .block-card.locked {
 .block-title {
   font-size: 13px; 
   color: #fff;
-  font-weight: 600;
+  font-weight: 480;
   text-align: center;
   line-height: 1.2;
 }
